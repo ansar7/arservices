@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ARDBEntities2" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ARDATAs" EntityType="ARDBModel.ARDATA" />
+  </EntityContainer>
+  <EntityType Name="ARDATA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Longitute" Type="Double" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="X_Position" Type="Double" />
+    <Property Name="Y_Position" Type="Double" />
+    <Property Name="Z_Position" Type="Double" />
+    <Property Name="Azimuth" Type="Double" />
+    <Property Name="Pitch" Type="Double" />
+    <Property Name="Role" Type="Double" />
+    <Property Name="Image" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="CompassPosition" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Extra" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

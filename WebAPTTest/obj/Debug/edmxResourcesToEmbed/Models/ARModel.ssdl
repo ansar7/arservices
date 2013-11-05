@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ARDBModelStoreContainer">
+    <EntitySet Name="ARDATA" EntityType="ARDBModel.Store.ARDATA" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ARDATA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Longitute" Type="float" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="X-Position" Type="float" />
+    <Property Name="Y-Position" Type="float" />
+    <Property Name="Z-Position" Type="float" />
+    <Property Name="Azimuth" Type="float" />
+    <Property Name="Pitch" Type="float" />
+    <Property Name="Role" Type="float" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="CompassPosition" Type="varchar(max)" />
+    <Property Name="Extra" Type="varchar(max)" />
+    <Property Name="Comment" Type="varchar(max)" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ARDBModelStoreContainer" CdmEntityContainer="ARDBEntities2">
+    <EntitySetMapping Name="ARDATAs">
+      <EntityTypeMapping TypeName="ARDBModel.ARDATA">
+        <MappingFragment StoreEntitySet="ARDATA">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Longitute" ColumnName="Longitute" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="X_Position" ColumnName="X-Position" />
+          <ScalarProperty Name="Y_Position" ColumnName="Y-Position" />
+          <ScalarProperty Name="Z_Position" ColumnName="Z-Position" />
+          <ScalarProperty Name="Azimuth" ColumnName="Azimuth" />
+          <ScalarProperty Name="Pitch" ColumnName="Pitch" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="CompassPosition" ColumnName="CompassPosition" />
+          <ScalarProperty Name="Extra" ColumnName="Extra" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

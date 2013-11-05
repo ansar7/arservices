@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ARDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ARDBModelStoreContainer">
+          <EntitySet Name="ARDATA" EntityType="ARDBModel.Store.ARDATA" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ARDATA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Longitute" Type="float" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="X-Position" Type="float" />
+          <Property Name="Y-Position" Type="float" />
+          <Property Name="Z-Position" Type="float" />
+          <Property Name="Azimuth" Type="float" />
+          <Property Name="Pitch" Type="float" />
+          <Property Name="Role" Type="float" />
+          <Property Name="Image" Type="varchar(max)" />
+          <Property Name="CompassPosition" Type="varchar(max)" />
+          <Property Name="Extra" Type="varchar(max)" />
+          <Property Name="Comment" Type="varchar(max)" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ARDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ARDBEntities2" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ARDATAs" EntityType="ARDBModel.ARDATA" />
+        </EntityContainer>
+        <EntityType Name="ARDATA">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Longitute" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="X_Position" Type="Double" />
+          <Property Name="Y_Position" Type="Double" />
+          <Property Name="Z_Position" Type="Double" />
+          <Property Name="Azimuth" Type="Double" />
+          <Property Name="Pitch" Type="Double" />
+          <Property Name="Role" Type="Double" />
+          <Property Name="Image" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CompassPosition" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Extra" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ARDBModelStoreContainer" CdmEntityContainer="ARDBEntities2">
+          <EntitySetMapping Name="ARDATAs">
+            <EntityTypeMapping TypeName="ARDBModel.ARDATA">
+              <MappingFragment StoreEntitySet="ARDATA">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Longitute" ColumnName="Longitute" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="X_Position" ColumnName="X-Position" />
+                <ScalarProperty Name="Y_Position" ColumnName="Y-Position" />
+                <ScalarProperty Name="Z_Position" ColumnName="Z-Position" />
+                <ScalarProperty Name="Azimuth" ColumnName="Azimuth" />
+                <ScalarProperty Name="Pitch" ColumnName="Pitch" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CompassPosition" ColumnName="CompassPosition" />
+                <ScalarProperty Name="Extra" ColumnName="Extra" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
